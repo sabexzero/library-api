@@ -94,3 +94,4 @@ POSTGRES_DB_USERNAME: {POSTGRES-USERNAME}
 ```bash
 docker-compose -f app-compose.yml up
 ```
+### 6. Открыть документацию Swagger
