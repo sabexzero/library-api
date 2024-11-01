@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  library-api:
+    image: sabextech/library-api:latest
+    environment:
+      KEYCLOAK_ADMIN_CLIENT_ID: admin-client-id
+      KEYCLOAK_ADMIN_PASSWORD:
+      KEYCLOAK_ADMIN_USERNAME:
+      KEYCLOAK_APPLICATION_REALM_NAME:
+      KEYCLOAK_CLIENT_ID:
+      KEYCLOAK_CLIENT_SECRET:
+      KEYCLOAK_HOST: keycloak
+      KEYCLOAK_MASTER_REALM_NAME:
+      KEYCLOAK_PORT: 8080
+      KEYCLOAK_REALM:
+      POSTGRES_DB_PASSWORD:
+      POSTGRES_DB_URL:
+      POSTGRES_DB_USERNAME:
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+      - keycloak
+    networks:
+      - library-network
+
+networks:
+  library-network:
+    external: true
