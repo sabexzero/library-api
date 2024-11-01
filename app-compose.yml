@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   library-api:
-    image: sabextech/library-api:latest
+    image: sabextech/library-api-secured:latest
     environment:
       KEYCLOAK_ADMIN_CLIENT_ID: admin-client-id
       KEYCLOAK_ADMIN_PASSWORD:
